@@ -1,0 +1,570 @@
+[
+    {
+        "id": "4b12215a927c17ec",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ad78470874cd1983",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b72630248c6f251b",
+        "type": "ui_tab",
+        "name": "Global",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "151725aebfccfccb",
+        "type": "ui_group",
+        "name": "Hora (Santiago/Chile)",
+        "tab": "b72630248c6f251b",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3f999fe956acf3db",
+        "type": "ui_tab",
+        "name": "Temperatura",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7c6c2f72cab2842c",
+        "type": "ui_group",
+        "name": "blah",
+        "tab": "3f999fe956acf3db",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a1eef14f4894ce25",
+        "type": "ui_spacer",
+        "z": "4b12215a927c17ec",
+        "name": "spacer",
+        "group": "bfa4e1839cb146e7",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "37eb203669054354",
+        "type": "mqtt-broker",
+        "name": "LOCALHOST",
+        "broker": "192.168.1.12",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "53bcc7b4ce1e43a9",
+        "type": "mqtt-broker",
+        "name": "RPI",
+        "broker": "192.168.1.13",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b5f0878549079614",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "b72630248c6f251b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "767c243769266c3a",
+        "type": "ui_group",
+        "name": "Humedad",
+        "tab": "b72630248c6f251b",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c538a5de87ac1135",
+        "type": "ui_clock",
+        "z": "4b12215a927c17ec",
+        "name": "Reloj análogico",
+        "group": "151725aebfccfccb",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "x": 420,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "bc36ed63b7ad7c2e",
+        "type": "inject",
+        "z": "4b12215a927c17ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "c538a5de87ac1135",
+                "f656b7472d795cfd"
+            ]
+        ]
+    },
+    {
+        "id": "f656b7472d795cfd",
+        "type": "ui_digital_clock",
+        "z": "4b12215a927c17ec",
+        "name": "Reloj digital",
+        "group": "151725aebfccfccb",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "x": 410,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "88b2ca8e575d1ba1",
+        "type": "mqtt out",
+        "z": "4b12215a927c17ec",
+        "name": "",
+        "topic": "test/temperatura",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "53bcc7b4ce1e43a9",
+        "x": 600,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "84768777ce17a136",
+        "type": "debug",
+        "z": "4b12215a927c17ec",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "86d03ec3245b468a",
+        "type": "ui_chart",
+        "z": "4b12215a927c17ec",
+        "name": "",
+        "group": "767c243769266c3a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Humedad",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#0400ff",
+            "#0400ff",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 600,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0bf8f4bf2dc1366c",
+        "type": "ui_chart",
+        "z": "4b12215a927c17ec",
+        "name": "",
+        "group": "b5f0878549079614",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff0000",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "772e1bd34cbe484b",
+        "type": "mqtt in",
+        "z": "4b12215a927c17ec",
+        "name": "test/datos",
+        "topic": "test/datos",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "53bcc7b4ce1e43a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "5526e38f671e8a53",
+                "d7e64a71241fb53a",
+                "84768777ce17a136"
+            ]
+        ]
+    },
+    {
+        "id": "b19fb28e425e5b6d",
+        "type": "inject",
+        "z": "4b12215a927c17ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "qos",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "p": "retain",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "test/temperatura",
+        "payload": "{\"timestamp\":\"2213141\",\"value\":\"15\"}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b803cfaa246d01a",
+        "type": "mqtt out",
+        "z": "4b12215a927c17ec",
+        "name": "",
+        "topic": "test/humedad",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "53bcc7b4ce1e43a9",
+        "x": 600,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5526e38f671e8a53",
+        "type": "function",
+        "z": "4b12215a927c17ec",
+        "name": "parseTemp",
+        "func": "var input = msg.payload;\nvar dataAsList = input.split(\"|\");\nmsg.payload = parseFloat(dataAsList[0]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "88b2ca8e575d1ba1"
+            ]
+        ]
+    },
+    {
+        "id": "d7e64a71241fb53a",
+        "type": "function",
+        "z": "4b12215a927c17ec",
+        "name": "parseHum",
+        "func": "var input = msg.payload;\nvar dataAsList = input.split(\"|\");\nmsg.payload = parseFloat(dataAsList[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "1b803cfaa246d01a"
+            ]
+        ]
+    },
+    {
+        "id": "e41540aa7b39c8bf",
+        "type": "mqtt in",
+        "z": "4b12215a927c17ec",
+        "name": "test/temperatura",
+        "topic": "test/temperatura",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "53bcc7b4ce1e43a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 440,
+        "wires": [
+            [
+                "0bf8f4bf2dc1366c"
+            ]
+        ]
+    },
+    {
+        "id": "30babc6e8b251752",
+        "type": "mqtt in",
+        "z": "4b12215a927c17ec",
+        "name": "test/humedad",
+        "topic": "test/humedad",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "53bcc7b4ce1e43a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 520,
+        "wires": [
+            [
+                "86d03ec3245b468a"
+            ]
+        ]
+    }
+]
