@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+# Importamos la libreira de PySerial
+import serial
+# Importamos la libreria de PahoMQTT para Publicar
+import paho.mqtt.publish as publish
+
+# Abrimos el puerto del arduino a 9600
+PuertoSerie = serial.Serial('/dev/ttyUSB0', 9600)
+# Creamos un buble sin fin
+while True:
+  # leemos hasta que encontarmos el final de linea
+  #sArduino = PuertoSerie.readline().decode()
+  sArduino = PuertoSerie.readline().decode()
+  #Publicamos mensaje
+  publish.single("test/datos", sArduino, hostname="192.168.1.13",port=1883, auth={"username":"admin","password":"admin"})
+  # Mostramos el valor leido y eliminamos el salto de linea del final
+  print (sArduino)
