@@ -12,6 +12,8 @@ while True:
   # leemos hasta que encontarmos el final de linea
   #sArduino = PuertoSerie.readline().decode()
   sArduino = PuertoSerie.readline().decode()
+  x = input()
+  wArduino = PuertoSerie.write(x.encode("utf-8"))
   #Publicamos mensaje
   publish.single("test/datos", sArduino, hostname="192.168.1.13",port=1883, auth={"username":"admin","password":"admin"})
   # Mostramos el valor leido y eliminamos el salto de linea del final
