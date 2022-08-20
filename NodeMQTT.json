@@ -14,8 +14,8 @@
         "name": "Reloj análogico",
         "group": "151725aebfccfccb",
         "order": 1,
-        "width": "4",
-        "height": "3",
+        "width": "0",
+        "height": "0",
         "x": 420,
         "y": 20,
         "wires": []
@@ -62,9 +62,9 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "da1877d07d9a911a",
+        "broker": "d90ee9881e553474",
         "x": 540,
-        "y": 100,
+        "y": 80,
         "wires": []
     },
     {
@@ -91,8 +91,8 @@
         "name": "Chart Humedad",
         "group": "767c243769266c3a",
         "order": 0,
-        "width": "8",
-        "height": "8",
+        "width": "0",
+        "height": "0",
         "label": "",
         "chartType": "line",
         "legend": "true",
@@ -135,8 +135,8 @@
         "name": "Chart Temperatura",
         "group": "b5f0878549079614",
         "order": 0,
-        "width": "8",
-        "height": "8",
+        "width": "0",
+        "height": "0",
         "label": "",
         "chartType": "line",
         "legend": "true",
@@ -180,7 +180,7 @@
         "topic": "test/datos",
         "qos": "1",
         "datatype": "auto-detect",
-        "broker": "da1877d07d9a911a",
+        "broker": "d90ee9881e553474",
         "nl": false,
         "rap": true,
         "rh": 0,
@@ -191,45 +191,9 @@
             [
                 "5526e38f671e8a53",
                 "d7e64a71241fb53a",
-                "84768777ce17a136"
+                "84768777ce17a136",
+                "bc0475e7eab1d5a0"
             ]
-        ]
-    },
-    {
-        "id": "b19fb28e425e5b6d",
-        "type": "inject",
-        "z": "4b12215a927c17ec",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "qos",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "p": "retain",
-                "v": "true",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "test/temperatura",
-        "payload": "{\"timestamp\":\"2213141\",\"value\":\"15\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 80,
-        "wires": [
-            []
         ]
     },
     {
@@ -245,9 +209,9 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "da1877d07d9a911a",
+        "broker": "d90ee9881e553474",
         "x": 540,
-        "y": 180,
+        "y": 140,
         "wires": []
     },
     {
@@ -262,7 +226,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 100,
+        "y": 80,
         "wires": [
             [
                 "88b2ca8e575d1ba1"
@@ -281,7 +245,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "1b803cfaa246d01a"
@@ -296,7 +260,7 @@
         "topic": "test/temperatura",
         "qos": "1",
         "datatype": "auto-detect",
-        "broker": "da1877d07d9a911a",
+        "broker": "d90ee9881e553474",
         "nl": false,
         "rap": true,
         "rh": 0,
@@ -319,7 +283,7 @@
         "topic": "test/humedad",
         "qos": "1",
         "datatype": "auto-detect",
-        "broker": "da1877d07d9a911a",
+        "broker": "d90ee9881e553474",
         "nl": false,
         "rap": true,
         "rh": 0,
@@ -343,7 +307,7 @@
         "width": 0,
         "height": 0,
         "name": "Current Temperatura",
-        "label": "Lectura:",
+        "label": "Últ. lectura:",
         "format": "{{msg.payload}}°C",
         "layout": "row-spread",
         "className": "",
@@ -360,7 +324,7 @@
         "width": 0,
         "height": 0,
         "name": "Current Humedad",
-        "label": "Lectura:",
+        "label": "Últ. lectura:",
         "format": "{{msg.payload}}%",
         "layout": "row-spread",
         "className": "",
@@ -375,7 +339,7 @@
         "name": "Historic Temperatura",
         "group": "7c6c2f72cab2842c",
         "order": 0,
-        "width": "10",
+        "width": "12",
         "height": "8",
         "label": "",
         "chartType": "line",
@@ -419,7 +383,7 @@
         "name": "Historic Humedad",
         "group": "2597742540ed9fef",
         "order": 0,
-        "width": "10",
+        "width": "12",
         "height": "8",
         "label": "",
         "chartType": "line",
@@ -457,37 +421,6 @@
         ]
     },
     {
-        "id": "ca8f85f335678401",
-        "type": "ui_led",
-        "z": "4b12215a927c17ec",
-        "order": 3,
-        "group": "60347f417d934660",
-        "width": "1",
-        "height": "1",
-        "label": "",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#808080",
-                "value": "false",
-                "valueType": "bool"
-            },
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "",
-        "x": 530,
-        "y": 660,
-        "wires": []
-    },
-    {
         "id": "9a3538b3de0a55e5",
         "type": "ui_switch",
         "z": "4b12215a927c17ec",
@@ -496,27 +429,28 @@
         "tooltip": "",
         "group": "60347f417d934660",
         "order": 1,
-        "width": "0",
-        "height": "0",
+        "width": "3",
+        "height": "1",
         "passthru": true,
         "decouple": "false",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
+        "onvalue": "1",
+        "onvalueType": "num",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
+        "offvalue": "0",
+        "offvalueType": "num",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 300,
-        "y": 560,
+        "x": 280,
+        "y": 740,
         "wires": [
             [
+                "8118d6b086eece0a",
                 "06e8ff61ec49680b"
             ]
         ]
@@ -526,7 +460,7 @@
         "type": "mqtt out",
         "z": "4b12215a927c17ec",
         "name": "",
-        "topic": "test/luz",
+        "topic": "test/extractor",
         "qos": "1",
         "retain": "true",
         "respTopic": "",
@@ -534,9 +468,9 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "da1877d07d9a911a",
-        "x": 540,
-        "y": 560,
+        "broker": "d90ee9881e553474",
+        "x": 670,
+        "y": 740,
         "wires": []
     },
     {
@@ -544,20 +478,283 @@
         "type": "mqtt in",
         "z": "4b12215a927c17ec",
         "name": "test/luz",
-        "topic": "test/luz",
+        "topic": "test/extractor",
         "qos": "1",
         "datatype": "auto-detect",
-        "broker": "da1877d07d9a911a",
+        "broker": "d90ee9881e553474",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 290,
-        "y": 660,
+        "x": 70,
+        "y": 840,
         "wires": [
             [
-                "ca8f85f335678401"
+                "c9508b7852d226b0"
             ]
+        ]
+    },
+    {
+        "id": "aecc44f46fb068bc",
+        "type": "ui_gauge",
+        "z": "4b12215a927c17ec",
+        "name": "",
+        "group": "60347f417d934660",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Desempeño Ventilación",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "33",
+        "seg2": "66",
+        "className": "",
+        "x": 590,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b7a8e135d7af6b00",
+        "type": "ui_chart",
+        "z": "4b12215a927c17ec",
+        "name": "Chart Electroconductividad",
+        "group": "82ecbaa0d55a84de",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Esperando datos...",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ffff00",
+            "#0400ff",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 460,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f758f94a1e8ddf2",
+        "type": "mqtt in",
+        "z": "4b12215a927c17ec",
+        "name": "test/electroconduct",
+        "topic": "test/electroconduct",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "d90ee9881e553474",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "7c9e21bb862f9b70",
+                "b7a8e135d7af6b00",
+                "af2964b2b9a4f025"
+            ]
+        ]
+    },
+    {
+        "id": "7c9e21bb862f9b70",
+        "type": "ui_text",
+        "z": "4b12215a927c17ec",
+        "group": "82ecbaa0d55a84de",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Current EC",
+        "label": "Últ. lectura:",
+        "format": "{{msg.payload}}ms/cm",
+        "layout": "row-spread",
+        "className": "",
+        "x": 350,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "af2964b2b9a4f025",
+        "type": "ui_chart",
+        "z": "4b12215a927c17ec",
+        "name": "Historic Electroconductividad",
+        "group": "754d53768fb9037e",
+        "order": 0,
+        "width": "10",
+        "height": "8",
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Esperando datos...",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ffff00",
+            "#0400ff",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 600,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b834af42f693900f",
+        "type": "mqtt out",
+        "z": "4b12215a927c17ec",
+        "name": "test/electroconduct",
+        "topic": "test/electroconduct",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d90ee9881e553474",
+        "x": 550,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bc0475e7eab1d5a0",
+        "type": "function",
+        "z": "4b12215a927c17ec",
+        "name": "parseEC",
+        "func": "var input = msg.payload;\nvar dataAsList = input.split(\"|\");\nmsg.payload = parseFloat(dataAsList[2]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "b834af42f693900f"
+            ]
+        ]
+    },
+    {
+        "id": "c9508b7852d226b0",
+        "type": "function",
+        "z": "4b12215a927c17ec",
+        "name": "parsePerformance",
+        "func": "var input = msg.payload;\nif (input) {\n    msg.payload = Math.round(Math.random() * 100);\n} else {\n    msg.payload = 0\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "aecc44f46fb068bc"
+            ]
+        ]
+    },
+    {
+        "id": "8118d6b086eece0a",
+        "type": "ui_led",
+        "z": "4b12215a927c17ec",
+        "order": 2,
+        "group": "60347f417d934660",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 470,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "bed6840abb4ef471",
+        "type": "ui_template",
+        "z": "4b12215a927c17ec",
+        "group": "151725aebfccfccb",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style type=\"text/css\">\n    body {\n        background-image: url(\"https://www.todofondos.net/wp-content/uploads/4k-wallpaper-lovely-4k-minimalist-wallpaper-67-imagen-autos-recientes-scaled.jpg\");\n        background-size: cover;\n        background-repeat: no-repeat;\n    }\n    .nr-dashboard-cardpanel {\n        background: initial;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 600,
+        "y": 20,
+        "wires": [
+            []
         ]
     },
     {
@@ -571,19 +768,19 @@
         "height": 1
     },
     {
-        "id": "16f996611b9c2bdc",
+        "id": "b72dd3a13a1786fe",
         "type": "ui_spacer",
         "z": "4b12215a927c17ec",
         "name": "spacer",
-        "group": "60347f417d934660",
-        "order": 2,
+        "group": "3a14465f4cf6aa88",
+        "order": 1,
         "width": 1,
         "height": 1
     },
     {
         "id": "151725aebfccfccb",
         "type": "ui_group",
-        "name": "Hora (Santiago/Chile)",
+        "name": "Hora",
         "tab": "b72630248c6f251b",
         "order": 1,
         "disp": true,
@@ -592,10 +789,10 @@
         "className": ""
     },
     {
-        "id": "da1877d07d9a911a",
+        "id": "d90ee9881e553474",
         "type": "mqtt-broker",
-        "name": "MI PC",
-        "broker": "192.168.1.128",
+        "name": "SERVER",
+        "broker": "test.mosquitto.org",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -625,7 +822,7 @@
         "tab": "b72630248c6f251b",
         "order": 3,
         "disp": true,
-        "width": "8",
+        "width": "10",
         "collapse": false,
         "className": ""
     },
@@ -636,7 +833,7 @@
         "tab": "b72630248c6f251b",
         "order": 2,
         "disp": true,
-        "width": "8",
+        "width": "10",
         "collapse": false,
         "className": ""
     },
@@ -665,13 +862,44 @@
     {
         "id": "60347f417d934660",
         "type": "ui_group",
-        "name": "Luz",
+        "name": "Ventilación",
         "tab": "b72630248c6f251b",
         "order": 4,
         "disp": true,
         "width": "4",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "82ecbaa0d55a84de",
+        "type": "ui_group",
+        "name": "Electroconductividad",
+        "tab": "b72630248c6f251b",
+        "order": 5,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "754d53768fb9037e",
+        "type": "ui_group",
+        "name": "Historic Electroconductividad",
+        "tab": "a9024d6546ed2563",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3a14465f4cf6aa88",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
     },
     {
         "id": "b72630248c6f251b",
@@ -687,7 +915,7 @@
         "type": "ui_tab",
         "name": "Temperatura",
         "icon": "dashboard",
-        "order": 2,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -696,7 +924,16 @@
         "type": "ui_tab",
         "name": "Humedad",
         "icon": "dashboard",
-        "order": 3,
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a9024d6546ed2563",
+        "type": "ui_tab",
+        "name": "Electroconductividad",
+        "icon": "dashboard",
+        "order": 5,
         "disabled": false,
         "hidden": false
     }
